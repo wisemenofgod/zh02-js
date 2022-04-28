@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var obj = {
+            username: "吴天宝",
+            age: 21,
+            sex: "男",
+            sayhi: function () {
+                console.log("hello")
+            }
+        }
+        console.log(obj.age)
+        obj.sayhi();
+
+
+
+        var o = new Object();
+        o.name = "黎巧";
+        o.sayhi = function () {
+            console.log("hei")
+        }
+        console.log(o.name);
+        o.sayhi();
+
+
+
+
+
+
+
+
+        // 构造函数的方法创建对象
+        // 构造函数的首字母大写
+        function Star(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex
+
+        }
+
+        var l = new Star("陈诗雨", 20, "jakgj")
+
+        console.log(l.name)
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>

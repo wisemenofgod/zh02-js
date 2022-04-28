@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 400px;
+            /* border: 1px solid red; */
+            margin: 100px auto;
+            border-bottom: 1px solid #ccc;
+        }
+
+        input {
+            width: 350px;
+            height: 40px;
+            outline: none;
+            border: 0;
+        }
+
+        #btn {
+
+            top: 7px;
+            right: 10px;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: pink;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="box">
+        <input type="password" id="pwd">
+        <div id="btn"></div>
+    </div>
+
+
+
+
+    <script>
+        var inpu = document.getElementById("pwd");
+        var btn = document.getElementById("btn");
+        flag = 0;
+
+
+        btn.onclick = function () {
+            if (flag == 0) {
+                inpu.type = "text"
+                flag = 1;
+                this.style.backgroundColor = "skyblue"
+            } else {
+                inpu.type = "password"
+                flag = 0;
+                this.style.backgroundColor = "pink"
+            }
+
+        }
+
+    </script>
+</body>
+
+
+
+</html>

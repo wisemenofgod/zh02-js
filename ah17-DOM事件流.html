@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            background-color: pink;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+    <script>
+
+        // document
+        // HTML
+        // body
+        // father
+        // son
+        // 为true时为捕获从上往下
+        // false时为冒泡从下往上
+
+
+
+        var son = document.querySelector(".son")
+        son.addEventListener("click", function () {
+            alert("son")
+        }, true)
+
+        var father = document.querySelector(".father")
+        father.addEventListener("click", function () {
+            alert("father")
+        }, true)
+
+
+        son.addEventListener("click", function (event) {
+            alert("son")
+            // 阻止冒泡
+            event.stopPropagation();
+        }, false)
+
+        var father = document.querySelector(".father")
+        father.addEventListener("click", function () {
+            alert("father")
+        }, false)
+
+
+
+
+    </script>
+</body>
+
+</html>

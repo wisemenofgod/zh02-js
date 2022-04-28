@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            position: relative;
+            width: 200px;
+            padding-right: 30px;
+            border: 1px solid skyblue;
+            margin-bottom: 5px;
+
+        }
+
+        ul li button {
+            position: absolute;
+            right: 0;
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>发布</button>
+
+    <ul>
+
+    </ul>
+
+</body>
+<script>
+    var txtarea = document.querySelector("textarea");
+    var btn = document.querySelector("button")
+
+    btn.onclick = function () {
+        if (txtarea.value.trim() != "") {
+            var li = document.createElement("li")
+            btn.nextElementSibling.append(li)
+            btn.nextElementSibling.children
+            [btn.nextElementSibling.children.length - 1].innerHTML = txtarea.value.trim() + "<button>删除</button>"
+            li.children[li.children.length - 1].onclick = function () {
+                li.parentNode.removeChild(li)
+            }
+        }
+    }
+
+    // var cs = btn.nextElementSibling.children
+
+    // for (var i = 0; i < cs.length; i++) {
+    //     cs[i].children[cs[i].children.length - 1].onclick = function () {
+    //         btn.nextElementSibling.remove(this.parentNode)
+    //     }
+    // }
+
+
+
+
+</script>
+
+</html>

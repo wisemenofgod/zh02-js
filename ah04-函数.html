@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+
+        var sum = getsum(10, 10)
+        console.log(sum)
+
+        var s = getall(100)
+        console.log(s)
+
+        function getsum(num1, num2) {
+            console.log(num1 + num2)
+            return num1 + num2
+        }
+
+
+        function getall(a) {
+            var sum = 0;
+            for (var i = 1; i <= a; i++) {
+                sum += i;
+            }
+            return sum;
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

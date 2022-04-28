@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>wise men of god</div>
+
+
+    <script>
+        var d = document.querySelector("div")
+        d.addEventListener("selectstart", function (e) {
+            e.preventDefault();
+        })
+
+
+
+
+        document.addEventListener("click", function (e) {
+            console.log(e.clientX)
+            console.log(e.clientY)
+
+            console.log(e.pageX)
+            console.log(e.pageY)
+
+            console.log(e.screenX)
+            console.log(e.screenY)
+        })
+    </script>
+
+
+</body>
+
+</html>
